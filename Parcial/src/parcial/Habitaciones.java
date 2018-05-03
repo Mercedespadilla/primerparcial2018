@@ -104,7 +104,7 @@ public class Habitaciones {
         }  
     }
     public String Datos(){
-        return "La habitacion " + codigo + " con estado " + estado + " y de tipo "+ tipo + " cuesta "+ precio;
+        return "La habitacion " + piso + " con estado " + estado + " y de tipo "+ tipo + " cuesta "+ precio;
     } 
 }
 
