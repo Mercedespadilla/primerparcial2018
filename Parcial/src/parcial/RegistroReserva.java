@@ -7,7 +7,7 @@ package parcial;
 
 /**
  *
- * @author ufg
+ * @author mercedes padilla
  */
 public class RegistroReserva {
     
