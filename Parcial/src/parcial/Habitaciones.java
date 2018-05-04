@@ -11,7 +11,7 @@ package parcial;
  */
 public class Habitaciones {
     
-    public String piso;
+    public String NumHabitacion;
     public String tipo;
     public String estado;
     public double precio;
@@ -19,19 +19,19 @@ public class Habitaciones {
     public Habitaciones() {
     }
 
-    public Habitaciones(String piso, String tipo, String estado, double precio) {
-        this.piso = piso;
+    public Habitaciones(String NumHabitacion, String tipo, String estado, double precio) {
+        this.NumHabitacion = NumHabitacion;
         this.tipo = tipo;
         this.estado = estado;
         this.precio = precio;
     }
 
-    public String getPiso() {
-        return piso;
+    public String getNumHabitacion() {
+        return NumHabitacion;
     }
 
-    public void setPiso(String piso) {
-        this.piso = piso;
+    public void setNumHabitacion(String NumHabitacion) {
+        this.NumHabitacion = NumHabitacion;
     }
 
     public String getTipo() {
@@ -81,7 +81,7 @@ public class Habitaciones {
     
     }
     public static double preciohabitacion(int num){
-        int precio=120;
+        int precio=100;
         if(num<41){
             if(num%2==0){
                 return precio*2;       
@@ -104,7 +104,7 @@ public class Habitaciones {
         }  
     }
     public String Datos(){
-        return "La habitacion " + piso + " con estado " + estado + " y de tipo "+ tipo + " cuesta "+ precio;
+        return "La habitacion " + NumHabitacion + " con estado " + estado + " y de tipo "+ tipo + " cuesta "+ precio;
     } 
 }
 
