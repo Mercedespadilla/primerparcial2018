@@ -13,13 +13,13 @@ public class Habitaciones {
     
     public String piso;
     public String tipo;
-    public boolean estado;
+    public String estado;
     public double precio;
 
     public Habitaciones() {
     }
 
-    public Habitaciones(String piso, String tipo, boolean estado, double precio) {
+    public Habitaciones(String piso, String tipo, String estado, double precio) {
         this.piso = piso;
         this.tipo = tipo;
         this.estado = estado;
@@ -42,11 +42,11 @@ public class Habitaciones {
         this.tipo = tipo;
     }
 
-    public boolean getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
