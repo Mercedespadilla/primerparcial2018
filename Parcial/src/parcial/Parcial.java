@@ -20,7 +20,7 @@ public class Parcial {
         while(n<61){
             
             if(n%2==0){
-                String tipo="habitacion dobles";
+                String tipo="habitaciones dobles";
                 listahabitaciones[n-1]=new Habitaciones(Habitaciones.tipohabitacion(n),tipo,estado,Habitaciones.preciohabitacion(n));
                 n=n+1;    
             }
