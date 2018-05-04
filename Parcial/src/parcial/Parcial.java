@@ -13,17 +13,7 @@ import java.util.Scanner;
  * @author Daniela Chavez
  */
 public class Parcial{
-    //private ArrayList<Huesped> huespedes;
-    //private ArrayList<Reservacion> reservaciones;
     
-    //GeneradorHabitacion generador= new GeneradorHabitacion();
-    //ParcialPOO generator = new ParcialPOO();
-    
-    public Parcial(){
-      //  huespedes = new ArrayList<>();
-        //reservaciones = new ArrayList<>();
-    }
-   
     public int split(String cadena){
         int n;
         String c,p;
