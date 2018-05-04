@@ -26,11 +26,11 @@ public class Habitaciones {
         this.precio = precio;
     }
 
-    public String getCodigo() {
+    public String getPiso() {
         return piso;
     }
 
-    public void setCodigo(String piso) {
+    public void setPiso(String piso) {
         this.piso = piso;
     }
 
@@ -81,7 +81,7 @@ public class Habitaciones {
     
     }
     public static double preciohabitacion(int num){
-        int precio=200;
+        int precio=120;
         if(num<41){
             if(num%2==0){
                 return precio*2;       
