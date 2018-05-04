@@ -196,7 +196,7 @@ public class Parcial{
         
     public void inhabilitarPiso(Habitaciones[] inventariodeareservaciones){
         Scanner poo = new Scanner(System.in);
-        System.out.println("INHABILITACION DE PISO");
+        System.out.println("Inhabilitacion de piso");
         System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F (en mayúscula): ");
         String opc = poo.next();
         if(null!=opc)switch (opc) {
