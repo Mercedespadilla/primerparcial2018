@@ -68,26 +68,26 @@ public class Parcial{
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el piso de la habitación: ");
         String NumerodeHabitacion = poo.next();
-        int indice = split(NumerodeHabitacion);
+        int hom = split(NumerodeHabitacion);
         
         System.out.println("Ingrese el nuevo costo de la habitacion: ");
         double precio = poo.nextDouble();
-        inventariodehabitaciones[indice].setPrecio(precio);
+        inventariodehabitaciones[hom].setPrecio(precio);
         System.out.println("Precio a sido modificado exitosamente.");
     }
     public void inhabilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el Numero de habitación que desea inhabilitar: ");
         String Numerodehabitacion = poo.next();
-        int indice = split(Numerodehabitacion);
-        if(inventariodehabitaciones[indice].getEstado()=="Reservada"){
+        int hom = split(Numerodehabitacion);
+        if(inventariodehabitaciones[hom].getEstado()=="Reservada"){
             System.out.println("Habitacion ocupada, la Habitacion no se puede inhabilitar ");
         }
-        else if(inventariodehabitaciones[indice].getEstado()=="Inhabilitada"){
+        else if(inventariodehabitaciones[hom].getEstado()=="Inhabilitada"){
             System.out.println("Habitacion ya se encuentra inhabilitada");
         }
         else{
-            inventariodehabitaciones[indice].setEstado("Inhabilitada");
+            inventariodehabitaciones[hom].setEstado("Inhabilitada");
             System.out.println("Se inhabilitó habitación: "+inventariodehabitaciones[indice].getNumHabitacion());
         }
     }
@@ -95,12 +95,12 @@ public class Parcial{
         Scanner poo = new Scanner(System.in);
         System.out.println(" Ingrese el numero de la habitación que desea habilitar: ");
         String NumerodeHabitacion = poo.next();
-        int indice = split(NumerodeHabitacion);
-        if(inventariodehabitaciones[indice].getEstado()=="Disponible"){
+        int hom = split(NumerodeHabitacion);
+        if(inventariodehabitaciones[hom].getEstado()=="Disponible"){
             System.out.println("Habitacion ya disponible");
         }
         else{
-            inventariodehabitaciones[indice].setEstado("Disponible");
+            inventariodehabitaciones[hom].setEstado("Disponible");
             System.out.println("La habitación "+inventariodehabitaciones[indice].getNumHabitacion()+" ahora está disponible");
         }
         
@@ -143,33 +143,31 @@ public class Parcial{
         }
         else if(opc == 2) {
         
-        //reservaciones.get(pos).getHuesped().setNombre(nombre);
+       
         System.out.println("Ingrese el nombre de la habitacion (Ejemplo: A-3, B-10, etc): ");
         String  NumerodeHabitacion = poo.next();
-        int indice = split(id);
-        inventariodehabitaciones[indice].setEstado("Disponible");
-        int indice2=split(NumerodeHabitacion);
-        String est=inventariodehabitaciones[indice2].getEstado();
+        int hom = split(id);
+        inventariodehabitaciones[hom].setEstado("Disponible");
+        int hom2=split(NumerodeHabitacion);
+        String est=inventariodehabitaciones[hom2].getEstado();
         while (est != "Disponible") {
             System.out.println("Habitación ocupada o inhabilitada. Elija otra.");
             System.out.println("Ingrese el nombre de la habitacion (Ejemplo: A-3, B-2, C-8 etc): ");
             NumerodeHabitacion = poo.next();
-            indice2 = split( NumerodeHabitacion);
-            est = inventariodehabitaciones[indice2].getEstado();
+            hom2 = split( NumerodeHabitacion);
+            est = inventariodehabitaciones[hom2].getEstado();
         }
-        inventariodehabitaciones[indice2].setEstado("Disponible");
+        inventariodehabitaciones[hom2].setEstado("Disponible");
         System.out.println("Habitación a sido asiganada exitosamente. ");
         inventariodereservaciones[hot].getHabitaciones().setNumHabitacion( NumerodeHabitacion);
         }
-        /*else if(opc==3){
-            
-        }*/
+     
     }    
     public void inhabilitarPiso(Habitaciones[] inventariodehabitaciones){
-        Scanner leer = new Scanner(System.in);
+        Scanner poo = new Scanner(System.in);
         System.out.println("INHABILITACION DE PISO");
         System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F (en mayúscula): ");
-        String opc = leer.next();
+        String opc = poo.next();
         if(null!=opc)switch (opc) {
             case "A":
                 for(int i=0; i<10; i++){
@@ -214,10 +212,10 @@ public class Parcial{
     }
     
     public void habilitarPiso(Habitaciones[] inventariodehabitaciones){
-        Scanner leer = new Scanner(System.in);
+        Scanner poo = new Scanner(System.in);
         System.out.println("HABILITACION DE PISO");
         System.out.println("Ingrese el piso a habilitar A,B,C,D,E,F (en mayúscula): ");
-        String opc = leer.next();
+        String opc = poo.next();
         if(null!=opc)switch (opc) {
             case "A":
                 for(int i=0; i<10; i++){
