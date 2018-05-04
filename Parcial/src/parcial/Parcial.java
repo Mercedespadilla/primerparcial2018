@@ -71,14 +71,14 @@ public class Parcial{
         String Numerodehabitacion = poo.next();
         int hom = split(Numerodehabitacion);
         if(inventariodehabitaciones[hom].getEstado()=="Reservada"){
-            System.out.println("Habitacion ocupada, la Habitacion no se puede inhabilitar ");
+            System.out.println("Habitacion ocupada, La habitacion no se puede inhabilitar ");
         }
         else if(inventariodehabitaciones[hom].getEstado()=="Inhabilitada"){
-            System.out.println("Habitacion ya se encuentra inhabilitada");
+            System.out.println("La habitacion ya se encuentra inhabilitada");
         }
         else{
             inventariodehabitaciones[hom].setEstado("Inhabilitada");
-            System.out.println("Se inhabilitó habitación: "+inventariodehabitaciones[indice].getNumHabitacion());
+            System.out.println("Se inhabilitó habitación: "+inventariodehabitaciones[hom].getNumHabitacion());
         }
     }
     public void habilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
@@ -91,7 +91,7 @@ public class Parcial{
         }
         else{
             inventariodehabitaciones[hom].setEstado("Disponible");
-            System.out.println("La habitación "+inventariodehabitaciones[indice].getNumHabitacion()+" ahora está disponible");
+            System.out.println("La habitación "+inventariodehabitaciones[hom].getNumHabitacion()+" ahora está disponible");
         }
         
     }
@@ -115,45 +115,86 @@ public class Parcial{
         System.out.println("3- Paquete");
         int opc=pooo.nextInt();
         
-        if (opc == 1) {
-            Scanner poooo = new Scanner(System.in);
-            System.out.println("Ingrese el nuevo nombre: ");
-            String nombre = pooo.nextLine();
-            inventariodereservaciones[hot].getHuespedes().setNombre(nombre);
-            
-            inventariodereservaciones[hot].getHuespedes().setDui(pedirDui());
-            
-            Scanner pooooo=new Scanner(System.in);
-            System.out.println("Ingrese su tarjeta de credito: ");
-            int tarjeta=pooooo.nextInt();
-            inventariodereservaciones[hot].getHuespedes().setN_tarjeta(tarjeta);
-       
-            inventariodereservaciones[hot].getHuespedes().setEstadia(Estadia());
-
+        switch (opc) {
+            case 1:
+                Scanner poooo = new Scanner(System.in);
+                System.out.println("Ingrese el nuevo nombre: ");
+                String nombre = poooo.nextLine();
+                inventariodereservaciones[hot].getHuespedes().setNombre(nombre);
+                inventariodehuespedes[hot].setNombre(nombre);
+                Scanner pooooo=new Scanner(System.in);
+                System.out.println("Ingrese la tarjeta de credito: ");
+                int tarjeta=pooooo.nextInt();
+                inventariodereservaciones[hot].getHuespedes().setN_tarjeta(tarjeta);
+                inventariodehuesped[hot].setN_tarjeta(tarjeta);
+                int dias=Estadia();
+                inventariodereservaciones[hot].getHuespees().setEstadia(dias);
+                inventariodehuespedes[hot].setEstadia(dias);
+                break;
+            case 2:
+                System.out.println("Ingrese el numero la habitacion (Ejemplo: A-3, B-10, etc): ");
+                String NumerodeHabitacion = poo.next();
+                while(!NumerodeHabitacion.contains("-")){
+                    System.out.println("Formato erroneo");
+                    System.out.println("Ingrese el numero la habitacion ( A-3, B-10, etc): ");
+                    NumerodeHabitacion = poo.next();
+                }       int hom = split(NumerodeHabitacion);
+                String estate = inventariodehabitaciones[hom].getEstado();
+                //Validacion de que la habitacion seleccionada está disponible
+                while (!"Disponible".equals(estate)){
+                    System.out.println("Habitación ocupada o inhabilitada. Elija otra.");
+                    System.out.println("Ingrese el numero la habitacion ( A-3, B-10, etc): ");
+                    NumerodeHabitacion = poo.next();
+                    while(!NumerodeHabitacion.contains("-")){
+                        System.out.println("Error. Formato erroneo");
+                        System.out.println("Ingrese el numero la habitacion ( A-3, B-10, etc): ");
+                        NumerodeHabitacion = poo.next();
+                    }
+                    hom = split(NumerodeHabitacion);
+                    estate = inventariodehabitaciones[hom].getEstado();
+                }       inventariodehabitaciones[hom].setEstado("Reservada");
+                System.out.println("Habitación asiganada exitosamente. ");
+                int hab=split(inventariodereservacions[hom].getHabitaciones().getNumHabitacion());
+                inventariodehabitaciones[hab].setEstado("Disponible");
+                inventariodereservaciones[hom].getHabitacion().setNumHabitacion(NumerodeHabitacion);
+                break;
+            case 3:
+                Scanner pooooooo=new Scanner(System.in);
+                System.out.println("Ingrese el paquete que decea adquirir (basico o premium): ");
+                String opcn = pooooooo.next();
+                while(!"basico".equals(opcn) && !"premium".equals(opcn)){
+                    System.out.println("");
+                    System.out.println("¡Opcion incorrecta!");
+                    System.out.println("Ingrese el paquete que decea adquirir (basico o premium): ");
+                    opcn = poooooo.next();
+                }       if ("basico".equals(opcn)){
+                    inventariodereservaciones[hom].setPaquete(basico);
+                    
+                }
+                else if ("premium".equals(opcn)){
+                    inventariodereservaciones[hom].setPaquete(premium);
+                    
+                }       System.out.println(" Paquete a sido cambiado exitosamente...");
+                break;
+            default:
+                System.out.println("");
+                break;
         }
-        else if(opc == 2) {
+    }   
+      
+    public void MostrarReservacion(Reservaciones[] inventariodeareservaciones){
+        Scanner poo=new Scanner(System.in);
+        System.out.println("Nombre de la reservacion ");
+        String name = poo.nextLine();
+        int n=0;
+        while(!name.equals(inventariodeareservaciones[n].getHuesped().getNombre())){
+            n=n+1;
+        }
+        System.out.println("El nombre del huesped: " + inventariodeareservaciones[n].getHuespedes().getNombre());
+        System.out.println("Numero de habitacion: " + inventariodeareservaciones[n].getHabitaciones().getNumHabitacion());
+        System.out.println("El paquete elegido: " +inventariodeareservaciones[n].getPaquete().getNombre());
         
-       
-        System.out.println("Ingrese el nombre de la habitacion (Ejemplo: A-3, B-10, etc): ");
-        String  NumerodeHabitacion = poo.next();
-        int hom = split(id);
-        inventariodehabitaciones[hom].setEstado("Disponible");
-        int hom2=split(NumerodeHabitacion);
-        String est=inventariodehabitaciones[hom2].getEstado();
-        while (est != "Disponible") {
-            System.out.println("Habitación ocupada o inhabilitada. Elija otra.");
-            System.out.println("Ingrese el nombre de la habitacion (Ejemplo: A-3, B-2, C-8 etc): ");
-            NumerodeHabitacion = poo.next();
-            hom2 = split( NumerodeHabitacion);
-            est = inventariodehabitaciones[hom2].getEstado();
-        }
-        inventariodehabitaciones[hom2].setEstado("Disponible");
-        System.out.println("Habitación a sido asiganada exitosamente. ");
-        inventariodereservaciones[hot].getHabitaciones().setNumHabitacion( NumerodeHabitacion);
-        }
-     
-    }    
-    public void inhabilitarPiso(Habitaciones[] inventariodehabitaciones){
+    public void inhabilitarPiso(Habitaciones[] inventariodeareservaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("INHABILITACION DE PISO");
         System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F (en mayúscula): ");
