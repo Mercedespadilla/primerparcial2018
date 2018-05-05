@@ -34,7 +34,7 @@ public class Menu {
                 switch (opcion) {
                     case 1:
                         System.out.println("Has seleccionado la opcion 1 Huesped");
-                        Huesped.main(args);
+                        ProcesosHuesped.main(args);
                         break;
                     case 2:
                         System.out.println("Has seleccionado la opcion 2 Reserva");
