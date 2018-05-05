@@ -17,4 +17,4 @@ public class codigoreser {
          Scanner entradaEscaner = new Scanner (System.in);
          System.out.println ("Por favor introduzca el nombre del huesped:");
          String codigoreserva = entradaEscaner.nextLine ();  
-}
+}}
