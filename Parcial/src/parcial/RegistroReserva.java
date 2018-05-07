@@ -90,5 +90,21 @@ public class RegistroReserva {
     public void setFechasalida(String fechasalida) {
         this.fechasalida = fechasalida;
     }
+
+    public double getCantpersona() {
+        return cantpersona;
+    }
+
+    public void setCantpersona(double cantpersona) {
+        this.cantpersona = cantpersona;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
     
 }
