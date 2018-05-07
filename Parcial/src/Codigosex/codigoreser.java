@@ -115,5 +115,25 @@ public class codigoreser {
         }
 
     }
+     public static void Eliminar()
+    {
+        boolean estado;
+        for(int i = 0; i < Lista.size(); i++ ){
+        estado = Lista.remove(ObjH);
+        System.out.println("DATO "+(estado ? " <SI> " : " <NO> ")+"REMOVIDO");
+        }
+    }
     
+    public static String Menu()
+    {
+        System.out.println("\n**********OPCIONES************\n");
+        System.out.println("1.- Añadir Reserva");
+        System.out.println("2.- todas las Reserva");
+        System.out.println("3.- Buscar Reserva");
+        System.out.println("4.- Modificar Reserva");
+        System.out.println("5.- Eliminar Reserva");
+         System.out.println("6.- Salir del Sistema");
+        System.out.print("Digite Opcion entre 1-6:");
+        return tecla.next();
+    }
 }
