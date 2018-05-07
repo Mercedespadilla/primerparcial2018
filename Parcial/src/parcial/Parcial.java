@@ -95,13 +95,13 @@ public class Parcial{
         }
         
     }
-    public int TipHabitaciones(int num,  String id, Reservaciones[] inventariodereservaciones){
+    public int TipHabitaciones(int num,  String id, RegistroReserva[] inventariodereservaciones){
         while(!inventariodereservaciones[num].getHabitaciones().getNumHabitacion().equals(id)){
             num=num+1;   
         }
         return num;
     }
-    public void ModificarReservaciones(Habitaciones[] inventariodehabitaciones, Huespedes[] inventariodehuesped, Reservaciones[] Inventariodereservaciones){
+    public void ModificarReservaciones(Habitaciones[] inventariodehabitaciones, Huesped[] inventariodehuesped, RegistroReserva[] Inventariodereservaciones){
         Scanner poo=new Scanner(System.in);
         System.out.println("Ingrese el número de habitación reservada que desea modificar");
         String id=poo.nextLine();
@@ -182,7 +182,7 @@ public class Parcial{
         }
     }   
       
-    public void MostrarReservacion(Reservaciones[] inventariodeareservaciones){
+    public void MostrarReservacion(RegistroReserva[] inventariodeareservaciones){
         Scanner poo=new Scanner(System.in);
         System.out.println("Nombre de la reservacion ");
         String name = poo.nextLine();
@@ -190,7 +190,7 @@ public class Parcial{
         while(!name.equals(inventariodeareservaciones[n].getHuesped().getNombre())){
             n=n+1;
         }
-        System.out.println("El nombre del huesped: " + inventariodeareservaciones[n].getHuespedes().getNombre());
+        System.out.println("El nombre del huesped: " + inventariodeareservaciones[n].getHuesped().getNombre());
         System.out.println("Numero de habitacion: " + inventariodeareservaciones[n].getHabitaciones().getNumHabitacion());
         System.out.println("El paquete elegido: " +inventariodeareservaciones[n].getPaquete().getNombre());
         
