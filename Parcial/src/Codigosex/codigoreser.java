@@ -6,6 +6,7 @@
 package Codigosex;
 import java.util.ArrayList;
 import java.util.Scanner;
+import parcial.Huesped;
 import parcial.RegistroReserva;
 import parcial.Paquete;
 /**
@@ -13,8 +14,44 @@ import parcial.Paquete;
  * @author mercedes padilla
  */
 public class codigoreser {
-   private void crearReserva(RegistroReserva[] reservahotel ) {
-         Scanner entradaEscaner = new Scanner (System.in);
-         System.out.println ("Por favor introduzca el nombre del huesped:");
-         String codigoreserva = entradaEscaner.nextLine ();  
-}}
+    public static RegistroReserva ObjH;
+    public static ArrayList<RegistroReserva> Lista = new ArrayList<>();
+    public static Scanner tecla = new Scanner(System.in);
+    char Op;
+    public static void main(String[] args) {
+        String Op;
+        do{
+            Op = Menu();
+            switch(Op){
+            case "1":
+            Insertar();
+            break;
+            case "2":
+            Listar();
+            break;
+            case "3":
+            Buscar();
+            break;
+            case "4":
+            ObjH = new RegistroRegistro();
+            System.out.print("Ingrese el codigo de la reserva a modifica:"); 
+            ObjH.setNombre(tecla.next());
+            System.out.print("Fecha de la reserva:");
+            ObjH.setFechareserva(tecla.next());
+            System.out.print("fecha de entrada:");
+            ObjH.setFechaentrada(tecla.nextInt());
+            System.out.print("fecha de salida:");
+            ObjH.setFechasalida(tecla.next());
+            System.out.print("Cantodad de personas:");
+            ObjH.Cantpersonas(tecla.next());
+            System.out.print("Precio:");
+            ObjH.Precio(tecla.next());
+            Modificar();
+            break;
+            case "5":
+            System.out.println("Codigo de reserva a Eliminar?:");
+            ObjH.setCodigo(tecla.next());
+            Eliminar();
+            break;       
+            }
+}

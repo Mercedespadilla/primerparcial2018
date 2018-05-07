@@ -7,28 +7,28 @@ package Codigosex;
 import java.util.Scanner;
 import parcial.Paquete;
 import parcial.Habitaciones;
-
+import parcial.Menu;
 /**
  *
  * @author mercedes padilla
  */
 public class User {
-    public String user;
+    public String users;
     public String password;
 
-    public Usuario() {
+    public User() {
     }
 
-    public Usuario(String user, String password) {
-        this.user = user;
+    public User(String users, String password) {
+        this.users = users;
     }
 
-    public String getUser() {
-        return user;
+    public String getUsers() {
+        return users;
     }
 
-    public void setUser(String user) {
-        this.user = user;
+    public void setUsers(String users) {
+        this.users = users;
     }
     public String getPassword() {
         return password;
@@ -41,9 +41,9 @@ public class User {
     public void login(Habitaciones[] listahabitacion, Paquete basico, Paquete premium){
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese su usuario: ");
-        user = leer.nextLine();
+        users = leer.nextLine();
        
-        if(user.equals("admin") && password.equals("admin")){
+        if(users.equals("admin") && password.equals("admin")){
             System.out.println("Ha iniciado sesion como administrador");
             Menu menu = new Menu();
             menu.menuAdmin(listahabitacion, basico, premium);

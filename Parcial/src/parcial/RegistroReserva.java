@@ -16,13 +16,13 @@ public class RegistroReserva {
     private String fechasalida;
     public Habitaciones habitaciones;
     public Paquete paquete;
-    private Reser cliente;
+    private Huesped cliente;
     private double cantpersona;
     private double precio;
     
     public RegistroReserva(){
     }
-    public RegistroReserva(Cliente cliente, Habitaciones habitaciones, Paquete paquete, String codigoreserva, String fechaentrada, String fechasalida, String fechareserva) {
+    public RegistroReserva(Huesped cliente,double cantpersona,double precio, Habitaciones habitaciones, Paquete paquete, String codigoreserva, String fechaentrada, String fechasalida, String fechareserva) {
         this.cliente = cliente;
         this.codigoreserva = codigoreserva;
         this.habitaciones = habitaciones;
@@ -33,7 +33,7 @@ public class RegistroReserva {
 
     public RegistroReserva(String codigoreserva){
         this.codigoreserva = codigoreserva;
-        cliente = new Reser();
+        cliente = new Huesped();
     }
 
   
@@ -46,17 +46,17 @@ public class RegistroReserva {
     }
 
      public Huesped getHuesped() {
-        return huesped;
+        return cliente;
     }
 
-    public void setHuesped(Huesped huesped) {
-        this.huesped = huesped;
+    public void setHuesped(Huesped cliente) {
+        this.cliente = cliente;
     }
     public Habitaciones getHabitaciones() {
         return habitaciones;
     }
 
-    public void setHabitaciones(Habitacion habitaciones) {
+    public void setHabitaciones(Habitaciones habitaciones) {
         this.habitaciones = habitaciones;
     }
 
@@ -90,4 +90,5 @@ public class RegistroReserva {
     public void setFechasalida(String fechasalida) {
         this.fechasalida = fechasalida;
     }
+    
 }
