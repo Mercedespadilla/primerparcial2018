@@ -12,6 +12,9 @@ import parcial.Menu;
  *
  * @author mercedes padilla
  */
+
+
+//Clase Usuario
 public class User {
     public String users;
     public String password;
