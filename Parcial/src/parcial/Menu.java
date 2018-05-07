@@ -1,6 +1,8 @@
 package parcial;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import Codigosex.codigoreser;
+import Codigosex.User;
 
 /**
  * @author Monica Gomez
