@@ -117,7 +117,7 @@ public class Parcial{
         String id=poo.nextLine();
         int n=0;
         
-        int hot= TipHabitaciones(n,id, inventariodereservaciones);
+        /*int hot= TipHabitaciones(n,id, RegistroReserva);
         Scanner pooo=new Scanner(System.in);
         System.out.println("Ingrese la modificacion que decee realizar en la reservacion");
         System.out.println("1- Huesped");
@@ -189,7 +189,7 @@ public class Parcial{
             default:
                 System.out.println("");
                 break;
-        }
+        }*/
     }   
       
     public void MostrarReservacion(RegistroReserva[] inventariodeareservaciones){
@@ -206,7 +206,7 @@ public class Parcial{
         
     /*
         InhabiltarHabitaciones permite al dueño poder inhabilitar una habitacion en especifico.
-        */
+        
         
     public void InhabilitarPiso(Habitaciones[] inventariodeareservaciones){
         Scanner poo = new Scanner(System.in);
@@ -253,7 +253,7 @@ public class Parcial{
             default:
                 System.out.println("Ingresó mal el piso.");
                 break;
-        }
+        }*/
     }
     /* HabilitarPiso permite al dueño habilitar un piso.
      * el dueño puede habilitar un piso en caso de que este inhabilitado.
