@@ -2,7 +2,6 @@ package parcial;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Codigosex.codigoreser;
-import Codigosex.User;
 
 /**
  * @author Monica Gomez
@@ -17,7 +16,7 @@ public class Menu {
 		int intentos=1;
 		int maximo=3;
  
-				while((login!=1809)||(pass!=1234)&& (intentos<maximo)){
+				while((login!=1234)||(pass!=1234)&& (intentos<maximo)){
  
 					System.out.print("introduzca un login: ");
 					login=teclado.nextInt();
@@ -98,5 +97,6 @@ public class Menu {
                 sn.next();
             }
         }
-        }   
+        }  
+    }
 }
