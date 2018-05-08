@@ -1,7 +1,7 @@
 /**
  * @author Monica Gomez
  * 
- */
+ *//*
 package parcial;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ char Op;
             case "4":
             ObjE = new Expaquete();
             System.out.print("Ingrese el nombre del extra a modificar:"); 
-            ObjE.setNombreExtra(tecla.next());
+            ObjE.setNombreextras(tecla.next());
             System.out.print("Costo del extra:");
             ObjE.setCostoExtra(tecla.next());
             Modificar();
@@ -121,4 +121,4 @@ char Op;
     
     
     
-}
+}*/

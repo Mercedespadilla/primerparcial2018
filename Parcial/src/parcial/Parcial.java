@@ -57,7 +57,7 @@ public class Parcial{
         return n;
     }
     
-    
+    ArrayList<Habitaciones> listahabitacion  =new ArrayList<>();
     public void CambiarPrecio(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el piso de la habitación: ");
@@ -305,6 +305,23 @@ public class Parcial{
                 break;
         }
     }
+     public void mostrarHabiDispo(Habitaciones[] listahabitacion){
+        Scanner leer = new Scanner(System.in);
+        int cont=0;
+        System.out.println("---------------------------------------");
+        System.out.println("\nHABITACIONES DISPONIBLES\n");
+        for(int i=0; i<60; i++){
+            if(listahabitacion[i].getEstado()=="Disponible"){
+                System.out.print(listahabitacion[i].getNumHabitacion()+", ");
+            }
+            cont=cont+1;
+            if(cont%5==0){
+                System.out.println("");
+                System.out.println("");
+            }
+        }
+    }
+    
 }
 
 

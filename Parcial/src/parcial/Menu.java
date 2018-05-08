@@ -3,6 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import Codigosex.codigoreser;
 import Codigosex.codigopaquete;
+import java.util.ArrayList;
 
 /**
  * @author Monica Gomez
@@ -10,6 +11,8 @@ import Codigosex.codigopaquete;
 public class Menu {
 
     public static void main(String[] args) {
+        piso pisos= new piso();
+        ArrayList<Habitaciones> listahabitacion  =new ArrayList<>();
         //*****Agregando usuario
         Scanner teclado= new Scanner(System.in);
 		int login=0;
@@ -53,6 +56,7 @@ public class Menu {
             try {
  
                 System.out.println("Escribe una de las opciones");
+                Parcial p = new Parcial();
                 opcion = sn.nextInt();
  
                 switch (opcion) {
@@ -70,25 +74,29 @@ public class Menu {
                         break;
                     case 4:
                         System.out.println("Has seleccionado la opcion 4 Tipo Habitacion");
+                        tipodehabitaciones.main(args);
                         break;
                     case 5:
-                        System.out.println("Has seleccionado la opcion 5 Habitacion");
+                        System.out.println("Has seleccionado la opcion 5 Habitacion habilitar");
+                        p.HabilitarHabitaciones(listahabitacion);
                         break;
                     case 6:
-                        System.out.println("Has seleccionado la opcion 6 Disponibilidad");
+                        System.out.println("Has seleccionado la opcion 6 Habitacion inhabilitar");
                         break;
                     case 7:
-                        System.out.println("Has seleccionado la opcion 7 Categoria Habitacion");
+                        System.out.println("Has seleccionado la opcion 7 Disponibilidad de Habitacion");
+                        Parcial.mostrarHabiDispo(listahabitacion);
                         break;
                     case 8:
                         System.out.println("Has seleccionado la opcion 8 Piso");
                         break;
                     case 9:
                         System.out.println("Has seleccionado la opcion 9 Extras");
-                        ProcesosExtras.main(args);
+                        //ProcesosExtras.main(args);
                         break;
                     case 10:
                         System.out.println("Has seleccionado la opcion 10 Factura");
+                        factura.main(args);
                         break;
                     case 11:
                         salir = true;

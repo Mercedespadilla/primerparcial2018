@@ -25,7 +25,7 @@ public class Expaquete {
         return nombredeextras;
     }
 
-    public void setNombreextras(String detalle) {
+    public void setNombreextras(String nombreextras) {
         this.nombredeextras = nombredeextras;
     }
     public double getPrecioextra() {
