@@ -10,8 +10,12 @@ import java.util.Scanner;
 /**
 /**
  *
- * @author Daniela Chavez
+ * @author Daniela Chavez 
  */
+
+/*
+ El metodo de la clase parcial, recibe los datos de la habitacion. 
+*/
 public class Parcial{
     
     public int split(String cadena){
