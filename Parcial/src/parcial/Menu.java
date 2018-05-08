@@ -2,6 +2,7 @@ package parcial;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import Codigosex.codigoreser;
+import Codigosex.codigopaquete;
 
 /**
  * @author Monica Gomez
@@ -61,9 +62,11 @@ public class Menu {
                         break;
                     case 2:
                         System.out.println("Has seleccionado la opcion 2 Reserva");
+                        codigoreser.main(args);
                         break;
                     case 3:
                         System.out.println("Has seleccionado la opcion 3 Paquete");
+                        codigopaquete.main(args);
                         break;
                     case 4:
                         System.out.println("Has seleccionado la opcion 4 Tipo Habitacion");
