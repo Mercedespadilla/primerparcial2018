@@ -12,7 +12,7 @@ public class ProcesoExtras {
 public static Expaquete ObjE;
 public static ArrayList<Expaquete> L = new ArrayList<>();
 public static Scanner tecla = new Scanner(System.in);
-    private static Object Lista;
+public static ArrayList<Expaquete> Lista = new ArrayList<>();
 char Op;
  
     

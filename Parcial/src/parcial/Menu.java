@@ -97,7 +97,7 @@ public class Menu {
                         break;
                     case 9:
                         System.out.println("Has seleccionado la opcion 9 Extras");
-                        //ProcesosExtras.main(args);
+                        ProcesoExtras.main(args);
                         break;
                     case 10:
                         System.out.println("Has seleccionado la opcion 10 Factura");
