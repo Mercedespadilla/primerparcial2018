@@ -31,22 +31,5 @@ public class Habit {
         }
      }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 

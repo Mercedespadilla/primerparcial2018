@@ -10,7 +10,7 @@ import Codigosex.codigopaquete;
 public class Menu {
 
     public static void main(String[] args) {
-        //*****agregando usuario
+        //*****Agregando usuario
         Scanner teclado= new Scanner(System.in);
 		int login=0;
 		int pass=0;
@@ -19,13 +19,13 @@ public class Menu {
  
 				while((login!=1234)||(pass!=1234)&& (intentos<maximo)){
  
-					System.out.print("introduzca un login: ");
+					System.out.print("Introduzca el nombre de usuario: "); //Usuario predeterminado: 1234
 					login=teclado.nextInt();
-					System.out.print("Introduzca su pass:");
+					System.out.print("Introduzca contraseña:"); // Contraseña: 1234
 					pass=teclado.nextInt();
  
 					if(intentos==3){
-						System.out.println("acceso denegado..");
+						System.out.println("Acceso Denegado..");
 						intentos=intentos-maximo;
 					}
  
@@ -85,6 +85,7 @@ public class Menu {
                         break;
                     case 9:
                         System.out.println("Has seleccionado la opcion 9 Extras");
+                        ProcesosExtras.main(args);
                         break;
                     case 10:
                         System.out.println("Has seleccionado la opcion 10 Factura");
