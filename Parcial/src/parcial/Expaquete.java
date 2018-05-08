@@ -10,18 +10,28 @@ package parcial;
  * @author mercedes padilla
  */
 public class Expaquete {
-    public String detalle;
-
-    public Expaquete(String detalle) {
-        this.detalle = detalle;
+    public String nombredeextras;
+    public double precio;
+    public Expaquete(){
+    }
+    public Expaquete(String nombredeextras, double precio) {
+        this.nombredeextras = nombredeextras;
+        this.precio = precio;
     }
 
-    public String getDetalle() {
-        return detalle;
+    public String getNombreextras() {
+        return nombredeextras;
     }
 
-    public void setDetalle(String detalle) {
-        this.detalle = detalle;
+    public void setNombreextras(String detalle) {
+        this.nombredeextras = nombredeextras;
+    }
+    public double getPrecioextra() {
+        return precio;
+    }
+
+    public void setPrecioextra(double precio) {
+        this.precio = precio;
     }
 
 }
