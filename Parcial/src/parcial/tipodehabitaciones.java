@@ -13,6 +13,28 @@ import Codigosex.User;
  * @author Daniela Chavez
  */
 public class tipodehabitaciones {
+    public static ArrayList <String> pbasico=new ArrayList<>();
+    public static ArrayList<String> ppremium=new ArrayList<>();
+
+    public tipodehabitaciones() {
+    }
+
+    public static ArrayList<String> getPbasico() {
+        return pbasico;
+    }
+
+    public static void setPbasico(ArrayList<String> pbasico) {
+        tipodehabitaciones.pbasico = pbasico;
+    }
+
+    public static ArrayList<String> getPpremium() {
+        return ppremium;
+    }
+
+    public static void setPpremium(ArrayList<String> ppremium) {
+        tipodehabitaciones.ppremium = ppremium;
+    }   
+    
     public static void main(String[] args) {
         
        
@@ -41,24 +63,24 @@ public class tipodehabitaciones {
         n=0;
         while(n<2){
             if(n==0){
-                ArrayList <String> paquetebasico=new ArrayList<>();
+                ArrayList <String> pbasico=new ArrayList<>();
                 String paquete1="Básico";
-                paquetebasico.add("Acceso a la piscina");
-                paquetebasico.add("Acceso a internet ilimitado");
+                pbasico.add("Acceso a la piscina");
+                pbasico.add("Acceso a internet ilimitado");
                 
-                basico=new Paquete(paquete1,costo, paquetebasico);
+                basico=new Paquete(paquete1,costo, pbasico);
                 n=n+1;
             }
             else{
-                ArrayList<String> paquetepremium=new ArrayList<>();
+                ArrayList<String> ppremium=new ArrayList<>();
                 String paquete2="Premium";
-                paquetepremium.add("Buffet de desayuno");
-                paquetepremium.add("Acceso ilimitado a la piscina");
-                paquetepremium.add("Servicio a la habitacion");
-                paquetepremium.add("Acceso ilimitado al mini bar");
-                paquetepremium.add("Acceso ilimitado al internet");
+                ppremium.add("Buffet de desayuno");
+                ppremium.add("Acceso ilimitado a la piscina");
+                ppremium.add("Servicio a la habitacion");
+                ppremium.add("Acceso ilimitado al mini bar");
+                ppremium.add("Acceso ilimitado al internet");
                 
-                premium=new Paquete(paquete2,costo*15, paquetepremium);
+                premium=new Paquete(paquete2,costo*15, ppremium);
                 n=n+1;
             }
         } 
