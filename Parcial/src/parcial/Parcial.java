@@ -69,6 +69,9 @@ public class Parcial{
         inventariodehabitaciones[hom].setPrecio(precio);
         System.out.println("Precio a sido modificado exitosamente.");
     }
+    /*
+    inhabilitarhabitaciones permite al dueño inhabilitar una habitacion por cualquier motivo en especifico.
+    */
     public void inhabilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el Numero de habitación que desea inhabilitar: ");
@@ -85,6 +88,9 @@ public class Parcial{
             System.out.println("Se inhabilitó habitación: "+inventariodehabitaciones[hom].getNumHabitacion());
         }
     }
+    /*
+     habiltarhabitaciones permite al dueño poder habilitar una habitacion en especifico.
+    */
     public void habilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println(" Ingrese el numero de la habitación que desea habilitar: ");
