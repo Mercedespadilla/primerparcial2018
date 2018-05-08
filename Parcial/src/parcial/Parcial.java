@@ -58,7 +58,7 @@ public class Parcial{
     }
     
     
-    public void cambiarPrecio(Habitaciones[] inventariodehabitaciones){
+    public void CambiarPrecio(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el piso de la habitación: ");
         String NumerodeHabitacion = poo.next();
@@ -70,9 +70,9 @@ public class Parcial{
         System.out.println("Precio a sido modificado exitosamente.");
     }
     /*
-    inhabilitarhabitaciones permite al dueño inhabilitar una habitacion por cualquier motivo en especifico.
+    Inhabilitarhabitaciones permite al dueño inhabilitar una habitacion por cualquier motivo en especifico.
     */
-    public void inhabilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
+    public void InhabilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Ingrese el Numero de habitación que desea inhabilitar: ");
         String Numerodehabitacion = poo.next();
@@ -89,9 +89,9 @@ public class Parcial{
         }
     }
     /*
-     habiltarhabitaciones permite al dueño poder habilitar una habitacion en especifico.
+     HabiltarHabitaciones permite al dueño poder habilitar una habitacion en especifico.
     */
-    public void habilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
+    public void HabilitarHabitaciones(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println(" Ingrese el numero de la habitación que desea habilitar: ");
         String NumerodeHabitacion = poo.next();
@@ -150,14 +150,14 @@ public class Parcial{
                     NumerodeHabitacion = poo.next();
                 }       int hom = split(NumerodeHabitacion);
                 String estate = inventariodehabitaciones[hom].getEstado();
-                //Validacion de que la habitacion seleccionada está disponible
+                //Valida que la habitacion seleccionada por el cliente este disponible
                 while (!"Disponible".equals(estate)){
                     System.out.println("Habitación ocupada o inhabilitada. Elija otra.");
-                    System.out.println("Ingrese el numero la habitacion ( A-3, B-10, etc): ");
+                    System.out.println("Ingrese el numero la habitacion ( A-9, B-1, etc): ");
                     NumerodeHabitacion = poo.next();
                     while(!NumerodeHabitacion.contains("-")){
                         System.out.println("Error. Formato erroneo");
-                        System.out.println("Ingrese el numero la habitacion ( A-3, B-10, etc): ");
+                        System.out.println("Ingrese el numero la habitacion ( A-4, B-2, etc): ");
                         NumerodeHabitacion = poo.next();
                     }
                     hom = split(NumerodeHabitacion);
@@ -204,7 +204,11 @@ public class Parcial{
         System.out.println("Numero de habitacion: " + inventariodeareservaciones[n].getHabitaciones().getNumHabitacion());
         System.out.println("El paquete elegido: " +inventariodeareservaciones[n].getPaquete().getNombre());
         
-    public void inhabilitarPiso(Habitaciones[] inventariodeareservaciones){
+    /*
+       
+        */
+        
+    public void InhabilitarPiso(Habitaciones[] inventariodeareservaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Inhabilitacion de piso");
         System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F (en mayúscula): ");
@@ -251,11 +255,12 @@ public class Parcial{
                 break;
         }
     }
-    
-    public void habilitarPiso(Habitaciones[] inventariodehabitaciones){
+    /* HabilitarPiso permite al dueño habilitar un piso.
+     */
+    public void HabilitarPiso(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("HABILITACION DE PISO");
-        System.out.println("Ingrese el piso a habilitar A,B,C,D,E,F (en mayúscula): ");
+        System.out.println("Ingrese el piso a habilitar A,B,C,D,E,F: ");
         String opc = poo.next();
         if(null!=opc)switch (opc) {
             case "A":
