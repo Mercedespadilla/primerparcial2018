@@ -6,6 +6,7 @@
 package parcial;
 
 import java.util.ArrayList;
+import Codigosex.User;
 
 /**
  *
@@ -19,7 +20,7 @@ public class tipodehabitaciones {
         Paquete basico = new Paquete();
         Habitaciones[] inventariodehabitaciones=new Habitaciones[60];
         Huesped[] listahuesped=new Huesped[60];
-        Reservacion listareservacion[]=new Reservacion[60];
+        RegistroReserva listareservacion[]=new RegistroReserva[60];
    
         int n=1;
         String estado="Habitacion Disponible";
@@ -63,7 +64,7 @@ public class tipodehabitaciones {
         } 
         
         
-        Usuario login = new Usuario();
+        User login = new User();
         login.login(inventariodehabitaciones,basico,premium); 
     }
  
