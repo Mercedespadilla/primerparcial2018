@@ -6,7 +6,7 @@
 package parcial;
 
 import java.util.ArrayList;
-import Codigosex.User;
+
 
 /**
  *
@@ -84,10 +84,6 @@ public class tipodehabitaciones {
                 n=n+1;
             }
         } 
-        
-        
-        User login = new User();
-        login.login(inventariodehabitaciones,basico,premium); 
     }
  
 }
