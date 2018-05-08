@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author alejandra padilla
  */
 public class Paquete {
-     public String nombre;
+    public String nombre;
     public double precio;
     public ArrayList<String> servicios;
 
