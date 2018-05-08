@@ -1,7 +1,7 @@
 /**
  * @author Monica Gomez
  * 
- *//*
+ */
 package parcial;
 
 import java.util.ArrayList;
@@ -9,9 +9,10 @@ import java.util.Scanner;
 
 public class ProcesoExtras {
 
-public static Huesped ObjE;
+public static Expaquete ObjE;
 public static ArrayList<Expaquete> L = new ArrayList<>();
 public static Scanner tecla = new Scanner(System.in);
+    private static Object Lista;
 char Op;
  
     
@@ -34,12 +35,12 @@ char Op;
             System.out.print("Ingrese el nombre del extra a modificar:"); 
             ObjE.setNombreextras(tecla.next());
             System.out.print("Costo del extra:");
-            ObjE.setCostoExtra(tecla.next());
+            ObjE.setPrecioextra(tecla.nextDouble());
             Modificar();
             break;
             case "5":
             System.out.println("Ingrese el Nombre del extra a Eliminar:");
-            ObjE.setNombreExtra(tecla.next());
+            ObjE.setNombreextras(tecla.next());
             Eliminar();
             break;       
             }
@@ -51,9 +52,9 @@ char Op;
     {	
         ObjE = new Expaquete();
         System.out.print("Nombre del paquete:");
-        ObjE.setNombreExtra(tecla.next());
+        ObjE.setNombreextras(tecla.next());
         System.out.print("Costo del paquete:");
-        ObjE.setCostoExtra(tecla.next())
+        ObjE.setPrecioextra(tecla.nextDouble());
         L.add(ObjE);
     }
     
@@ -61,8 +62,8 @@ char Op;
     {	
         System.out.println("=== LISTADO DE Extras ===");
         for(int i = 0; i < L.size(); i++ )
-        System.out.println(L.get(i).getNombreExtra()+"\t "+
-        L.get(i).getCostoExtra());
+        System.out.println(L.get(i).getNombreextras()+"\t "+
+        L.get(i).getPrecioextra());
         
     }
     
@@ -71,10 +72,11 @@ char Op;
         System.out.print("Ingrese el nombre del extra a buscar:");
         String valor = tecla.next();
         for(int i = 0; i < L.size() ; i++)
-        if(L.get(i).getNombreExtra().equalsIgnoreCase(valor)){
-        System.out.println(Lista.get(i).getCostoExtra()+"\t "+
-        L.get(i).getNombreExtra()+"\t"+
-        L.get(i).getCostoExtra());
+        if(L.get(i).getNombreextras().equalsIgnoreCase(valor)){
+        System.out.println(Lista.get(i).getPrecioextra()+"\t "+
+                
+        L.get(i).getNombreextras()+"\t"+
+        L.get(i).getPrecioextra());
         
         estado = true;
         break;
@@ -86,7 +88,7 @@ char Op;
     { 
         boolean estado = false;
         for(int i = 0; i < L.size(); i++ ){
-        if(L.get(i).getNombreExtra().equalsIgnoreCase(ObjE.getNombreExtra())){
+        if(L.get(i).getNombreextras().equalsIgnoreCase(ObjE.getNombreextras())){
         estado = true;
         L.set(i, ObjE);
         System.out.println("=== DATO "+(estado ? " <SI> ":" <NO> ")+" MODIFICADO");
@@ -121,4 +123,4 @@ char Op;
     
     
     
-}*/
+}

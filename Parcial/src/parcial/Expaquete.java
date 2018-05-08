@@ -9,6 +9,14 @@ public class Expaquete {
     public double precio;
     public Expaquete(){
     }
+
+     Expaquete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Expaquete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public void VerExtras()
     {
@@ -34,6 +42,10 @@ public class Expaquete {
 
     public void setPrecioextra(double precio) {
         this.precio = precio;
+    }
+
+    Object getNombreExtra() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
