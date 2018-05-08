@@ -205,13 +205,13 @@ public class Parcial{
         System.out.println("El paquete elegido: " +inventariodeareservaciones[n].getPaquete().getNombre());
         
     /*
-       
+        InhabiltarHabitaciones permite al dueño poder inhabilitar una habitacion en especifico.
         */
         
     public void InhabilitarPiso(Habitaciones[] inventariodeareservaciones){
         Scanner poo = new Scanner(System.in);
         System.out.println("Inhabilitacion de piso");
-        System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F (en mayúscula): ");
+        System.out.println("Ingrese el piso a inhabilitar A,B,C,D,E,F : ");
         String opc = poo.next();
         if(null!=opc)switch (opc) {
             case "A":
@@ -256,10 +256,11 @@ public class Parcial{
         }
     }
     /* HabilitarPiso permite al dueño habilitar un piso.
+     * el dueño puede habilitar un piso en caso de que este inhabilitado.
      */
     public void HabilitarPiso(Habitaciones[] inventariodehabitaciones){
         Scanner poo = new Scanner(System.in);
-        System.out.println("HABILITACION DE PISO");
+        System.out.println("Habilitacion de piso");
         System.out.println("Ingrese el piso a habilitar A,B,C,D,E,F: ");
         String opc = poo.next();
         if(null!=opc)switch (opc) {
@@ -305,10 +306,10 @@ public class Parcial{
         }
     }
 }
-    
-   
-                    
-    
+
+
+              
+  
         
         
    
