@@ -321,6 +321,14 @@ public class Parcial{
             }
         }
     }
+
+    void HabilitarHabitaciones(ArrayList<Habitaciones> listahabitacion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void mostrarHabiDispo(ArrayList<Habitaciones> listahabitacion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
 

@@ -27,6 +27,10 @@ entonces por eso se importa para poder hacer uso de una tabla */
  * @author Acer
  */
 public class piso {
+
+    static void main(String[] args) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /*Declaración de variables*/
     
     private String Nombre;

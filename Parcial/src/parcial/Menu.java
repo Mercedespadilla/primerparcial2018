@@ -82,13 +82,18 @@ public class Menu {
                         break;
                     case 6:
                         System.out.println("Has seleccionado la opcion 6 Habitacion inhabilitar");
+                {
+                    Habitaciones[] inventariodehabitaciones = null;
+                    p.InhabilitarHabitaciones(inventariodehabitaciones);
+                }
                         break;
                     case 7:
                         System.out.println("Has seleccionado la opcion 7 Disponibilidad de Habitacion");
-                        Parcial.mostrarHabiDispo(listahabitacion);
+                        p.mostrarHabiDispo(listahabitacion);
                         break;
                     case 8:
                         System.out.println("Has seleccionado la opcion 8 Piso");
+                        piso.main(args);
                         break;
                     case 9:
                         System.out.println("Has seleccionado la opcion 9 Extras");
