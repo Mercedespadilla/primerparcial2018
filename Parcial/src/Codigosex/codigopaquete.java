@@ -7,7 +7,7 @@ package Codigosex;
 import parcial.Paquete;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import parcial.Menu;
 /**
  *
  * @author mercedes padilla
@@ -63,4 +63,25 @@ public class codigopaquete {
         ObjP.setServicios(serv);
         Lista.add(ObjP);
     }
+    public static void Eliminar()
+    {
+        boolean estado;
+        for(int i = 0; i < Lista.size(); i++ ){
+        estado = Lista.remove(ObjP);
+        System.out.println("DATO "+(estado ? " <SI> " : " <NO> ")+"REMOVIDO");
+        }
+    }
+    
+    public static String Menu()
+    {
+        System.out.println("\n**********OPCIONES************\n");
+        System.out.println("1 paquete basico");
+        System.out.println("2 paquete premiun");
+        System.out.println("3 agregar paquete");
+        System.out.println("4 eliminar paquete");
+        System.out.println("5 Salir del Sistema");
+        System.out.print("Digite Opcion entre 1-5:");
+        return tecla.next();
+    }
 }
+
